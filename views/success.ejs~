@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>
+SUCCESS
+</title>
+<body>
+<h1> success</h1>
+<a href="http://127.0.0.1:8081/process_logout">Logout</a>
+</bpdy>
+</html>

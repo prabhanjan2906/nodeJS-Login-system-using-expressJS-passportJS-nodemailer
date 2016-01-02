@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <form action="http://127.0.0.1:8081/process_newUser" method="POST"> emailID: <input type="text" name="username">  <br>password: <input type="password" name="password"><br />
+
+security question<select id="secQues" name="secQues" class="secQues">
+  <option value="What is your mother's maiden name">What is your mother's maiden name</option>
+  <option value="Which was your first school you studied in">Which was your first school you studied in</option>
+  <option value="Which was the first car you bought">Which was the first car you bought</option>
+  <option value="Which is your most memorable gift">Which is your most memorable gift</option>
+</select> 
+
+
+
+Answer to security question <input type="text" name="securityAnswer"><br /> <input type="submit" value=Signup >
+    </form><br/>
+  </body>
+</html>
