@@ -5,10 +5,10 @@ error_codes = {errorCode_Success : 0, errorCode_UserExists : 1, errorCode_DBConn
 
 var connection = null;
 var DbUsername = process.env.DATABASE_USER || 'root';
-var dbPassword = process.env.DATABASE_PASSWD || 'prabhanjan';
+var dbPassword = process.env.DATABASE_PASSWD || 'DATABASE_PASSWD';
 var dbHost = process.env.DATABASE_HOSTNAME || 'localhost';
-var dbName = process.env.LOGIN_DATABASE || 'LoginDB';
-var tableName = process.env.LOGIN_TABLE || 'login_details';
+var dbName = process.env.LOGIN_DATABASE || 'LOGIN_DATABASE';
+var tableName = process.env.LOGIN_TABLE || 'LOGIN_TABLE';
 var query = null;
 var error = null;
 

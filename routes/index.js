@@ -16,7 +16,7 @@ exports.init = function(passport)
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Dashboard - Arizona State University', heading: "Dashboard" });
+  res.render('index', { title: 'Dashboard', heading: "Dashboard" });
 });
 
 router.get('/process_login', function(req, res, next) {

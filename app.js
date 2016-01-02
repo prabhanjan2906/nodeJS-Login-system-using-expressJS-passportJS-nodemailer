@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(session({
-	secret: process.env.SECRETKEY || 'ARIZONASTATEUNIVERSITYISAFANTASTICSCHOOL',
+	secret: process.env.SECRETKEY || 'SECRETKEY',
 	resave: true,
 	saveUninitialized: true
  } ));
