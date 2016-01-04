@@ -79,5 +79,13 @@ router.get('/process_logout', checkAuth, function(req, res, next) {
 //  res.render('login', { title: 'Dashboard Login' });
 });
 
+router.all('*', function(req, res, next){
+  if (req.secure) {
+    return next();
+  };
+ console.log("redirecting to secure session");
+ res.redirect('https://'+req.hostname+':'+ app.get('port_https')+req.url);
+});
+
 return router;
 };

@@ -16,7 +16,7 @@ exports.init = function(passport)
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Dashboard - Arizona State University', heading: "Dashboard" });
+  res.render('index', { title: 'Dashboard', heading: "Dashboard" });
 });
 
 router.get('/process_login', function(req, res, next) {
@@ -77,6 +77,14 @@ router.get('/success', function(req, res, next)
 
 router.get('/process_logout', checkAuth, function(req, res, next) {
 //  res.render('login', { title: 'Dashboard Login' });
+});
+
+router.all('*', function(req, res, next){
+  if (req.secure) {
+    return next();
+  };
+ console.log("redirecting to secure session");
+ res.redirect('https://'+req.hostname+':'+ app.get('port_https')+req.url);
 });
 
 return router;

@@ -6,7 +6,9 @@
 
 var app = require('../app');
 var debug = require('debug')('justTria:server');
-var http = require('http');
+var http = require('https');
+var fs = require('fs');
+var path = require('path');
 
 /**
  * Get port from environment and store in Express.
@@ -14,12 +16,23 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-console.log("Running app on " + port.toString());
+
+/**
+ * Set SSL Key and Certificate path.
+ */
+
+var httpsOptions = {
+    key: fs.readFileSync(path.join("host.key")),
+    cert: fs.readFileSync(path.join("host.cert")),
+    requestCert: false,
+    rejectUnauthorized: true
+};
+
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = http.createServer(httpsOptions, app);
 
 /**
  * Listen on provided port, on all network interfaces.

@@ -5,3 +5,6 @@ config/db.js~
 config/db.js~
 host.key
 host.cert
+app.js~
+package.json~
+test.js~
