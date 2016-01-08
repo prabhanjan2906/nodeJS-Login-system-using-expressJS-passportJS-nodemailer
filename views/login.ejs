@@ -8,11 +8,11 @@
     <p><% if (errorMessage) { %>
 	 <%= errorMessage %>
     <% } %> </p>
-
+    <br/>
     <form action="https://127.0.0.1:8081/process_login" method="POST"> 
-    emailID: <input type="text" name="username">  <br>password: <input type="password" name="password"><input type="submit" value=Login >
+    <center>E-Mail ID: <input type="text" name="username">  Password: <input type="password" name="password"></center><br><center><input type="submit" value=Login ></center>
     </form><br/>
-    <p> New User? <a href="https://127.0.0.1:8081/process_signup">Click Here</a> to sign up </p> <br/>
-    <p> Forgot Password? <a href="https://127.0.0.1:8081/users/process_ForgotPassword">Click Here</a> to reset your password </p> <br/>
+    <center><p> New User? <a href="https://127.0.0.1:8081/process_signup">Click Here</a> to sign up </p>
+    <p> Forgot Password? <a href="https://127.0.0.1:8081/users/process_ForgotPassword">Click Here</a> to reset your password </p> <br/></center>
   </body>
 </html>
